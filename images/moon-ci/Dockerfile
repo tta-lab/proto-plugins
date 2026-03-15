@@ -1,6 +1,6 @@
 FROM node:22.14.0
 
-RUN curl -fsSL https://moonrepo.dev/install/proto.sh | bash -s -- --yes
+RUN curl -fsSL https://moonrepo.dev/install/moon.sh | bash -s -- --yes 2>/dev/null || \
+    curl -fsSL https://moonrepo.dev/install/moon.sh | bash
 
-ENV PROTO_HOME=/root/.proto
-ENV PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
+ENV PATH="/root/.moon/bin:$PATH"
