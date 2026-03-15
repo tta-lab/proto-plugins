@@ -1,0 +1,25 @@
+name = "dagger"
+type = "cli"
+
+[platform.linux]
+archive-prefix = "dagger_v{version}_linux_{arch}"
+download-file = "dagger_v{version}_linux_{arch}.tar.gz"
+
+[platform.macos]
+archive-prefix = "dagger_v{version}_darwin_{arch}"
+download-file = "dagger_v{version}_darwin_{arch}.tar.gz"
+
+[platform.windows]
+archive-prefix = "dagger_v{version}_windows_{arch}"
+download-file = "dagger_v{version}_windows_{arch}.zip"
+
+[install]
+download-url = "https://github.com/dagger/dagger/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[resolve]
+git-url = "https://github.com/dagger/dagger"
+git-tag-pattern = "^v(\\d+\\.\\d+\\.\\d+)$"

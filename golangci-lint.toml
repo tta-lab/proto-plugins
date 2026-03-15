@@ -1,0 +1,25 @@
+name = "golangci-lint"
+type = "cli"
+
+[platform.linux]
+archive-prefix = "golangci-lint-{version}-linux-{arch}"
+download-file = "golangci-lint-{version}-linux-{arch}.tar.gz"
+
+[platform.macos]
+archive-prefix = "golangci-lint-{version}-darwin-{arch}"
+download-file = "golangci-lint-{version}-darwin-{arch}.tar.gz"
+
+[platform.windows]
+archive-prefix = "golangci-lint-{version}-windows-{arch}"
+download-file = "golangci-lint-{version}-windows-{arch}.zip"
+
+[install]
+download-url = "https://github.com/golangci/golangci-lint/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[resolve]
+git-url = "https://github.com/golangci/golangci-lint"
+git-tag-pattern = "^v(\\d+\\.\\d+\\.\\d+)$"
