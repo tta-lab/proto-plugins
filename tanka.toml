@@ -11,6 +11,10 @@ download-file = "tk-darwin-{arch}"
 download-url = "https://github.com/grafana/tanka/releases/download/v{version}/{download_file}"
 unpack = false
 
+[install.exes.tk]
+exe-path = "tanka"
+primary = true
+
 [install.arch]
 aarch64 = "arm64"
 x86_64 = "amd64"
